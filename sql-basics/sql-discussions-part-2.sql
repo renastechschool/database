@@ -11,7 +11,7 @@ select 'hello to this database workshop!' from dual;
 
 
 -- now() - gives the current UTC time and date. note that this date time is the server date time not the local date time
-select date(now()) from dual;
+select now() from dual;
 
 
 -- date_format(date, format_string) - date_format function converts the given 'date' in to a string based on the format_string
