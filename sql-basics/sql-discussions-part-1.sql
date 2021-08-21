@@ -21,7 +21,7 @@ All the items in the HR model above is related to one another. A company has dep
 
 /*
 relational databases have their own language in which we can ask them to do things. this language is called SQL
-SQL - Structure Query Language
+SQL - Structured Query Language
 */
 
 -- To fetch information from a database table is called as querying the database. SELECT statement helps us there
