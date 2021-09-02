@@ -86,9 +86,9 @@ select 1 as dummy_col, e.* from employees e;
 
 select employee_id, concat(first_name, ' ', last_name),salary,
   case
-	 when salary > 12000 and commission_pct > 0.35 then 'earns more than 12k'
-     when salary > 10000 then 'earns more than 10k'
-     else 'earns something else'
+	 when salary > 12000 and commission_pct > 0.35 then TRUE
+     when salary > 10000 then TRUE
+     else FALSE
   end as 'salary_info'
  from employees;
 
@@ -129,5 +129,6 @@ select job_id, avg(salary)
 select d.department_name, d.location_id, avg(e.salary) avg_sal
   from employees e
   join departments d on e.department_id = d.department_id
+  where e.department_id != 20
  group by d.department_name, d.location_id
  order by avg_sal;
